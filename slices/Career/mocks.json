@@ -1,0 +1,52 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {},
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "company_name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "vowel",
+              "type": "Text"
+            }
+          ],
+          [
+            "job_title",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "pan",
+              "type": "Text"
+            }
+          ],
+          [
+            "timeline",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "right",
+              "type": "Text"
+            }
+          ],
+          [
+            "job_description",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Labore consequat nostrud sunt veniam Lorem est pariatur exercitation eiusmod non sit nulla nostrud. In adipisicing ad in ex reprehenderit magna. Nulla ipsum officia consequat qui sunt enim reprehenderit Lorem dolore elit sunt ex ex magna in."
+                  }
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]
