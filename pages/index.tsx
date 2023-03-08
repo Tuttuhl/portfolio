@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
 import Card from '../components/Card'
-import { Oswald } from '@next/font/google'
 import { useState } from 'react'
 
 interface project {
@@ -17,8 +16,6 @@ interface job {
   description: string
   link: string
 }
-
-const oswald = Oswald({ subsets: ['latin'] })
 
 const projects = [
   {
@@ -55,8 +52,7 @@ const jobs = [
   }
 ]
 
-export default function Home() {
-  const [isVisible, setVisibility] = useState(false)
+export default function Home () {
   return (
     <>
       <Head>
@@ -66,11 +62,11 @@ export default function Home() {
       </Head>
       <Header />
       <main className={styles.main}>
-        <div id='about' className={ isVisible ? `${styles.container}` : `${styles.hidden}` }>
-          <h1 className={`${oswald.className} ${styles.heading}`}>hello, i&apos;m easton!</h1>
-          <p className={`${oswald.className} ${styles.paragraph}`}>software developer</p>
+        <div id='about' className={styles.container}>
+          <h1 className={styles.heading}>hello, i&apos;m easton</h1>
+          <h2 className={styles.subheading}>software developer</h2>
         </div>
-        <div id='jobs' className={`${oswald.className} ${styles.cards}`}>
+        <div id='career' className={styles.container}>
           {jobs.map((job: job) => (
             <Card key={job.name} name={job.name} title={job.title} description={job.description} link={job.link} />
           ))}
