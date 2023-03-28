@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from '../styles/Career.module.css'
 import { PrismicRichText } from '@prismicio/react'
 
 /**
@@ -6,31 +7,23 @@ import { PrismicRichText } from '@prismicio/react'
  * @typedef {import("@prismicio/react").SliceComponentProps<CareerSlice>} CareerProps
  * @param { CareerProps }
  */
-const Career = ({ slice }) => (
-  <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
-  </section>
-)
+const Career = ({ slice }) => {
+  return (
+    <>
+      {slice.items.map(item => {
+        return (
+          <div key={item.company_name} className={styles.card}>
+            <h1 className={styles.heading}>{item.company_name}</h1>
+            <h2 className={styles.subheading}>{item.job_title}</h2>
+            <h3 className={styles.timeline}>{item.timeline}</h3>
+            <PrismicRichText field={item.job_description} components={{
+              paragraph: ({ children }) => <p className={styles.text}>{children}</p>
+            }} />
+          </div>
+        )
+      })}
+    </>
+  )
+}
 
 export default Career

@@ -42,6 +42,17 @@ interface HomeDocumentData {
      */
     autobiography: prismicT.RichTextField;
     /**
+     * Slice Zone field in *Home*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<HomeDocumentDataSlicesSlice>;
+    /**
      * Meta Title field in *Home*
      *
      * - **Field Type**: Text
@@ -75,6 +86,11 @@ interface HomeDocumentData {
      */
     keywords: prismicT.KeyTextField;
 }
+/**
+ * Slice for *Home → Slice Zone*
+ *
+ */
+type HomeDocumentDataSlicesSlice = CareerSlice;
 /**
  * Home document from Prismic
  *
@@ -160,6 +176,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocument, AllDocumentTypes, CareerSliceDefaultItem, CareerSliceDefault, CareerSliceVariation, CareerSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, CareerSliceDefaultItem, CareerSliceDefault, CareerSliceVariation, CareerSlice };
     }
 }
