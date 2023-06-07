@@ -1,23 +1,14 @@
 import { ReactElement } from 'react'
-import Link from 'next/link'
-import styles from '../styles/Header.module.css'
+import Anchor from './Anchor'
 
 export default function Header (): ReactElement {
   return (
-    <header className={styles.header}>
-      <nav className={styles.nav}>
-        <Link href='#about' className={styles.link}>
-          About
-        </Link>
-        <Link href='#projects' className={styles.link}>
-          Projects
-        </Link>
-        <Link href='#career' className={styles.link}>
-          Career
-        </Link>
-        <Link href='#contact' className={styles.link}>
-          Contact
-        </Link>
+    <header>
+      <nav className='flex flex-row justify-center p-4 gap-4 md:justify-end'>
+        <Anchor href='#about' label='About' />
+        <Anchor href='#projects' label='Projects' />
+        <Anchor href='#career' label='Career' />
+        <Anchor href='#contact' label='Contact' />
       </nav>
     </header>
   )
