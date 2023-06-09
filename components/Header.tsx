@@ -6,9 +6,9 @@ export default function Header (): ReactElement {
     <header>
       <nav className='flex flex-row justify-center p-4 gap-4 md:justify-end'>
         <Anchor href='#about' label='About' />
-        <Anchor href='#projects' label='Projects' />
+        {/* <Anchor href='#projects' label='Projects' /> */}
         <Anchor href='#career' label='Career' />
-        <Anchor href='#contact' label='Contact' />
+        {/* <Anchor href='#contact' label='Contact' /> */}
       </nav>
     </header>
   )

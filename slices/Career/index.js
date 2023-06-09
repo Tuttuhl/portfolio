@@ -12,7 +12,7 @@ const Career = ({ slice }) => {
     <>
       {slice.items.map(item => {
         return (
-          <div key={item.company_name} className={styles.card}>
+          <div key={item.company_name + item.timeline} className={styles.card}>
             <h1 className={styles.heading}>{item.company_name}</h1>
             <h2 className={styles.subheading}>{item.job_title}</h2>
             <h3 className={styles.timeline}>{item.timeline}</h3>
