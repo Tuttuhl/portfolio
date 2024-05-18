@@ -31,10 +31,10 @@ export default function Home ({ page }: prismicProps) {
       <div id='career' className='px-4'>
         <SliceZone slices={page.data.slices} components={components} />
       </div>
-      <form id='contact' className='px-4'>
+      {/* <form id='contact' className='px-4'>
         <label htmlFor='email'>email address</label>
         <input type='text' id='email' />
-      </form>
+      </form> */}
     </>
   )
 }
