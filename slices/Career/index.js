@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from '../styles/Career.module.css'
 import { PrismicRichText } from '@prismicio/react'
 
 /**
@@ -10,14 +9,15 @@ import { PrismicRichText } from '@prismicio/react'
 const Career = ({ slice }) => {
   return (
     <>
+    <h1 className='text-center font-bold text-9xl'>career</h1>
       {slice.items.map(item => {
         return (
-          <div key={item.company_name + item.timeline} className={styles.card}>
-            <h1 className={styles.heading}>{item.company_name}</h1>
-            <h2 className={styles.subheading}>{item.job_title}</h2>
-            <h3 className={styles.timeline}>{item.timeline}</h3>
+          <div key={item.company_name + item.timeline}>
+            <h1 className='text-center m-0 text-5xl'>{item.company_name}</h1>
+            <h2 className='text-center m-0 text-2xl'>{item.job_title}</h2>
+            <h3 className='text-center'>{item.timeline}</h3>
             <PrismicRichText field={item.job_description} components={{
-              paragraph: ({ children }) => <p className={styles.text}>{children}</p>
+              paragraph: ({ children }) => <p className='text-center'>{children}</p>
             }} />
           </div>
         )

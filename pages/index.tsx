@@ -21,16 +21,20 @@ export default function Home ({ page }: prismicProps) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <div id='about' className='h-screen flex flex-col justify-center align-center transition-opacity'>
+      <div id='about' className='h-screen flex flex-col justify-center align-center transition-opacity px-4'>
         <h1 className='text-6xl lg:text-9xl text-center font-bold'>{page.data.welcome}</h1>
         <h2 className='text-3xl lg:text-6xl text-center mt-5'>{page.data.job_title}</h2>
         <PrismicRichText field={page.data.autobiography} components={{
           paragraph: ({ children }) => <p className='text-2xl lg:text4xl text-center mt-5'>{children}</p>
         }} />
       </div>
-      <div id='career'>
+      <div id='career' className='px-4'>
         <SliceZone slices={page.data.slices} components={components} />
       </div>
+      <form id='contact' className='px-4'>
+        <label htmlFor='email'>email address</label>
+        <input type='text' id='email' />
+      </form>
     </>
   )
 }
