@@ -1,24 +1,45 @@
 import Navigation from '@/components/Navigation'
 import Image from 'next/image'
+import * as motion from 'motion/react-client'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <>
+      <Navigation>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          href="#"
+          className="text-white hover:underline"
+        >
+          About
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          href="#"
+          className="text-white hover:underline"
+        >
+          Career
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          href="#"
+          className="text-white hover:underline"
+        >
+          Projects
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          href="#"
+          className="text-white hover:underline"
+        >
+          Scripts
+        </motion.a>
+      </Navigation>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Navigation>
-          <a href="#" className="text-white hover:underline">
-            About
-          </a>
-          <a href="#" className="text-white hover:underline">
-            Career
-          </a>
-          <a href="#" className="text-white hover:underline">
-            Projects
-          </a>
-          <a href="#" className="text-white hover:underline">
-            Scripts
-          </a>
-        </Navigation>
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -111,6 +132,6 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
-    </div>
+    </>
   )
 }
