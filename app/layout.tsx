@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import Navigation from '@/components/Navigation'
+import * as motion from 'motion/react-client'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -27,6 +29,40 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navigation>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            href="#"
+            className="text-white hover:underline"
+          >
+            About
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            href="#"
+            className="text-white hover:underline"
+          >
+            Career
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            href="#"
+            className="text-white hover:underline"
+          >
+            Projects
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            href="#"
+            className="text-white hover:underline"
+          >
+            Scripts
+          </motion.a>
+        </Navigation>
         {children}
       </body>
     </html>
