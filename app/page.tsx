@@ -1,53 +1,13 @@
-import Navigation from '@/components/Navigation'
 import Image from 'next/image'
-import * as motion from 'motion/react-client'
 
 export default function Home() {
   return (
     <>
-      <Navigation>
-        <motion.a
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          href="#"
-          className="text-white hover:underline"
-        >
-          About
-        </motion.a>
-        <motion.a
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          href="#"
-          className="text-white hover:underline"
-        >
-          Career
-        </motion.a>
-        <motion.a
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          href="#"
-          className="text-white hover:underline"
-        >
-          Projects
-        </motion.a>
-        <motion.a
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          href="#"
-          className="text-white hover:underline"
-        >
-          Scripts
-        </motion.a>
-      </Navigation>
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
+      <main className="px-10 flex flex-col gap-10">
+        <section id="about">
+          <h1 className="text-xl font-bold">about me</h1>
+          <p className="text-sm">software developer</p>
+        </section>
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Get started by editing{' '}
