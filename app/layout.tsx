@@ -33,7 +33,7 @@ export default function RootLayout({
           <motion.a
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
-            href="#"
+            href="#about"
             className="text-white hover:underline"
           >
             About
@@ -41,7 +41,7 @@ export default function RootLayout({
           <motion.a
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
-            href="#"
+            href="#career"
             className="text-white hover:underline"
           >
             Career
@@ -49,7 +49,7 @@ export default function RootLayout({
           <motion.a
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
-            href="#"
+            href="#projects"
             className="text-white hover:underline"
           >
             Projects
@@ -57,10 +57,18 @@ export default function RootLayout({
           <motion.a
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
-            href="#"
+            href="#scripts"
             className="text-white hover:underline"
           >
             Scripts
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            href="#contact"
+            className="text-white hover:underline"
+          >
+            Contact
           </motion.a>
         </Navigation>
         {children}
