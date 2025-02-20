@@ -138,8 +138,26 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section id="scripts"></section>
-        <section id="contact"></section>
+        <section id="scripts">
+          <h1 className="text-xl font-bold">scripts</h1>
+          <div className="pb-5">
+            <h2 className="text-lg font-bold">Useful Scripts for Windows</h2>
+            <h3>
+              <Link href="https://github.com/Tuttuhl/scripts-for-windows">
+                Check out the GitHub repository
+              </Link>
+            </h3>
+          </div>
+        </section>
+        <section id="contact">
+          <h1 className="text-xl font-bold">contact</h1>
+          <p className="text-sm">
+            email:{' '}
+            <Link href="mailto:eastonmtuttle@gmail.com">
+              eastonmtuttle@gmail.com
+            </Link>
+          </p>
+        </section>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
