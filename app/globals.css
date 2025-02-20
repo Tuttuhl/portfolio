@@ -25,7 +25,7 @@
 }
 
 :root {
-  --background: linear-gradient(to bottom, #2e2246, #4d3480);
+  --background: linear-gradient(to bottom, #111111, #1f1f1f);
   --foreground: #ededed;
 }
 
