@@ -25,15 +25,8 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: linear-gradient(to bottom, #2e2246, #4d3480);
+  --foreground: #ededed;
 }
 
 body {
